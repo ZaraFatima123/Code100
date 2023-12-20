@@ -1,0 +1,103 @@
+import java.util.*;
+
+class Bank_account {
+    double balance;
+    public Bank_account(double balance) {
+        this.balance = balance;
+    }
+
+    public double checkBalance() {
+        return balance;
+    }
+}
+
+interface ATM {
+    void deposit(float amt);
+    void Withdraw(float amt1);
+}
+
+class ATM_display implements ATM {
+    Bank_account account;
+
+    public ATM_display(Bank_account account) {
+        this.account = account;
+    }
+
+    public void deposit(float amt) {
+        if (amt > 0) {
+            account.balance += amt;
+            System.out.println("The deposited amount is: " + amt);
+            System.out.println("The current balance after deposit is: " + account.balance);
+            System.out.println("Thankyou! Keep using our bank!");
+        } 
+        else{
+            System.out.println("Invalid deposit! Try Again");
+        }
+    }
+
+    public void Withdraw(float amt1) {
+        if (amt1 > 0 && amt1 < account.balance) {
+            account.balance -= amt1;
+            System.out.println("Withrawn amount is: " + amt1);
+            System.out.println("The current balance after withrawl is: " + account.balance);
+            System.out.println("Thankyou! Keep using our bank!");
+
+        } 
+        else{
+            System.out.println("Invalid Withrawl! Try Again");
+        }
+    }
+
+    public void Display_Options(){
+
+        System.out.println("ENTER 1 TO DEPOSIT");
+        System.out.println("ENTER 2 TO WITHDRAW");
+        System.out.println("ENTER 3 TO CHECK BALANCE");
+        System.out.println("ENTER 4 TO EXIT");
+    }
+}
+
+public class ATM_new {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float amt = 0, amt1 = 0;
+        System.out.println("Enter the balance of your bank account: ");
+        double balance = sc.nextDouble();
+        sc.nextLine();
+
+        Bank_account b = new Bank_account(balance);
+        ATM_display atm = new ATM_display(b);
+
+        atm.Display_Options();
+
+        System.out.println("Choose your options: ");
+        System.out.println("Enter your choice: ");
+        String choice = sc.nextLine();
+
+        switch (choice) {
+            case "1":
+                System.out.print("Enter deposit amount: ");
+                amt = sc.nextInt();
+                atm.deposit(amt);
+                break;
+
+            case "2":
+                System.out.print("Enter withdrawal amount: ");
+                amt1 = sc.nextInt();
+                atm.Withdraw(amt1);
+                break;
+
+            case "3":
+                System.out.println("Current balance in your account is: " + b.checkBalance());
+                break;
+
+            case "4":
+                System.out.println("Program is terminated!");
+
+            default:
+                System.out.println("Invalid choice ! Please enter a number between 1 and 4.");
+                break;
+        }
+    }
+}
