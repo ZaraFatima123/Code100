@@ -1,0 +1,41 @@
+// TASK#2 : STUDENT GRADE CALCULATOR
+ import java.util.*;
+public class Student_grade_calculator{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float  marks_Science,marks_Maths,marks_English,marks_Social_Studeies;
+
+        System.out.println("Enter the total marks obtained by student in Science Subject out of 100: ");
+         marks_Science = sc.nextFloat();
+
+         System.out.println("Enter the total marks obtained by student in Maths Subject out of 100: ");
+         marks_Maths = sc.nextFloat();
+
+         System.out.println("Enter the total marks obtained by student in English Subject out of 100: ");
+         marks_English = sc.nextFloat();
+
+         System.out.println("Enter the total marks obtained by student in Social Studies Subject out of 100: ");
+         marks_Social_Studeies = sc.nextFloat();
+
+         Float Total_marks = marks_Science+marks_Maths+marks_English+marks_Social_Studeies;
+         Float average_percent = (Total_marks/4);
+
+
+         System.out.println("The total marks of student are: " + Total_marks);
+          System.out.println("The average of the Student's marks is: " + average_percent);
+
+          if(average_percent>75){
+            System.out.println("The Grade obtained by Student is: A");
+          }
+          else if(average_percent>60 && average_percent<70){
+            System.out.println("The Grade obtained by Student is: B");
+          }
+          else if(average_percent>50 && average_percent <60){
+            System.out.println("The Grade obtained by Student is: C");
+          }
+          else if(average_percent>40 && average_percent<50){
+            System.out.println("The Grade obtained by Student is: D");
+          }  
+          
+        }
+      }
