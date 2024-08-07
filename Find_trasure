@@ -1,0 +1,22 @@
+
+
+print("Welcome to Teasure Island! Your mission is to win the treasure!")
+Ask_input = (input("Which direction would you you like to go in? left or right?")).lower()
+
+if(Ask_input=="left"):
+    again2 = input("You have come to a lake,you have to cross it,do you want to swim or wait? ").lower()
+    if(again2=="wait"):
+          again3 = (input("Which door would you like to open? Red, Blue or Yellow?")).lower()
+          if(again3 == "red"):
+              print("Room full of fire! GAME OVER")
+          elif(again3 == "yellow"):
+              print("You found the treasure! YOU WON!")
+          elif(again3 == "blue"):
+              print("Room full of beasts! GAME OVER!")
+          else:
+              print("You chose a door that doesn't exist.GAME OVER!") 
+    else:
+          print("You got attacked by angry tout! GAME OVER! ")      
+else:
+   print("You fell in a hole! GAME OVER!")
+   
