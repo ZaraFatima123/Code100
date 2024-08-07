@@ -1,0 +1,52 @@
+alphabet = ['a','b','c','d','e','f','g','h','i','j','k',
+            'l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+            'a','b','c','d','e','f','g','h','i','j','k',
+            'l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+end_of_aphabet = False
+
+direction = input("Type 'encode' to encrypt,type 'decode' to decrypt: \n")
+text = input("Type your message: \n").lower()
+shift = int(input("Type shift number: \n"))
+
+def encrypt(text_input,shift_input):
+    cipher_text = ""
+    for letter in text_input:
+        position = alphabet.index(letter)         
+        new_position = position + shift_input
+        new_letter = alphabet[new_position]
+        cipher_text += new_letter
+    print(f"The encoded text is : {cipher_text}")    
+
+def decrypt(cipher_text,shift_input):
+    plain_text = ""
+    for letter in cipher_text:
+        position = alphabet.index(letter)         
+        new_position = position - shift_input
+        plain_text += alphabet[new_position]
+    print(f"The encoded text is : {plain_text}") 
+
+def caesar(start_input,shift_input,cipher_direction):
+    end_text = ""
+    for letter in start_input:
+         position = alphabet.index(letter)     
+         if cipher_direction == "encode":    
+          new_position = position + shift_input
+          new_letter = alphabet[new_position]
+          end_text += new_letter
+         print(f"The encoded text is : {end_text}")
+    # elif cipher_direction == "decode":          
+    #       new_position = position - shift_input
+    #       plain_text += alphabet[new_position]
+    #       print(f"The encoded text is : {end_text}") 
+
+
+
+
+
+if direction == "encode":
+    encrypt(text_input=text,shift_input = shift)
+elif direction == "decode":
+    decrypt(cipher_text=text,shift_input=shift)   
+else:
+    print("Invalid input!")     
