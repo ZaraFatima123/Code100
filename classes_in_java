@@ -1,0 +1,35 @@
+class FRUIT{             
+    String color;
+    String taste;
+    double price;
+public FRUIT(){
+        this.color = "red";
+        this.taste = "Yummy";
+        this.price = 10.00;
+    }
+public  FRUIT (String color){
+    this();
+    this.color = color;
+}
+public FRUIT(String taste,double price){
+    
+    this.taste = taste;
+    this.price = price;
+}
+public  FRUIT (String color, String taste,double price){
+    this.color = color;
+    this.taste = taste;
+    this.price = price;
+}
+public void display(){
+    System.out.println("The color of fruit is: " + color);
+    System.out.println("The taste of fruit is: " + taste);
+    System.out.println("The price of fruit is: " + price);
+}
+}
+ public class Q5week7 {
+    public static void main(String[] args) {
+        FRUIT f = new FRUIT("Red","Awesome",12.88);
+        f.display();
+    }
+}
