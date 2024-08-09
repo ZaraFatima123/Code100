@@ -1,0 +1,23 @@
+import java.util.*;
+public class Permutation{
+    public static void main(String[] args) {
+        int per=0;
+        int combination;
+        Scanner sc = new Scanner(System.in);
+        int fact = 1;
+        System.out.println("Enter n");
+        int n = sc.nextInt();
+        System.out.println("Enter r");
+        int r = sc.nextInt();
+        for(int i = 1;i<=n;i++){
+           per=(n*i)/((n-r)*i);
+        }
+        // System.out.println(fact);
+        
+        // permutation = fact*(n)/fact*(n-r);
+        System.out.println("The permutation is: " + per);
+
+         combination = fact*(n)/(fact*(r)*(fact*(n-r)));
+         System.out.println("The combination is: " + combination);
+    }
+}
