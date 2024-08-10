@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+  int a,b,num1,num2,temp,gcd,lcm;
+
+  num1 = a;
+  num2 = b;
+
+  printf("Enter the value of two numbers a and b whose gcd and lcm you want to compute: ");
+  scanf("%d %d",&a,&b);
+
+  while(num2!=0){
+    temp = num2;
+    num2 = num1 % num2;
+    num1 = temp;
+  }
+  gcd = num1;
+  lcm = (a*b)/gcd;
+
+  printf("The gcd of %d and %d is %d",a,b,gcd);
+  printf("\n");
+  printf("The lcm of %d and %d is %d",a,b,lcm);
+   
+
+   return 0;
+}
