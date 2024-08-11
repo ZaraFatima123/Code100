@@ -1,4 +1,4 @@
-## Overwiew:
+## Overview:
  -This repository contains various coding files written in C, C++,Java, and Python. These files cover a range of topics, including data structures, algorithms, and problem-solving exercises. The purpose of this repository is to serve as a collection of coding solutions and to help others learn and practice programming.
 
 ## Folder Structure:
