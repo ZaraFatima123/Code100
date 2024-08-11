@@ -8,7 +8,7 @@
 --**C++/**: Contains C++ programs focusing on object-oriented programming, advanced data structures, and algorithms.
 
 
-## Happy Usage!:
+## Happy Usage:
 -To use the code, simply navigate to the appropriate folder, compile (if necessary), and run the files using your preferred method.
 
 ## Contributing:
