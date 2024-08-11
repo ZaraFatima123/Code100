@@ -12,7 +12,7 @@
 -To use the code, simply navigate to the appropriate folder, compile (if necessary), and run the files using your preferred method.
 
 ## Contributing:
--Got ideas or improvements? Fork this repository, create a branch, make your changes, and open a pull request. Let’s make this repository even better together! 
+-Got ideas or improvements? Fork this repository, create a branch, make your changes, and open a pull request. Let’s make this repository even better together!
 
 ## Contact:
 -Feel free to reach out if you have questions or suggestions:
