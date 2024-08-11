@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int i,prime,up,low,n;
+
+    printf("Enter the lower limit: ");
+    scanf("%d",&low);
+
+    printf("Enter the upper limit: ");
+    scanf("%d",&up);
+  
+   for( n=low;n<=up;n++){
+            int c=0;
+
+            for(int i=1;i<=n;i++){
+                if(n%i==0){
+                    c++;
+                }
+            }
+            
+            if(c==2){
+                printf("\n Prime Numbers are:  %d", n);
+            }
+        }
+
+}
