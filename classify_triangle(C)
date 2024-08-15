@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+void read_triangle() {
+    int a, b, c;
+    printf("Enter the value of sides of triangle a, b, and c: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    if (a >= b + c || b >= a + c || c >= a + b) {
+        printf("No triangle is formed.\n");
+        return;
+    }
+
+    int a2 = a * a;
+    int b2 = b * b;
+    int c2 = c * c;
+
+    if (a2 == b2 + c2 || b2 == a2 + c2 || c2 == a2 + b2) {
+        printf("Right-angled triangle is formed.\n");
+    } else if (a2 > b2 + c2 || b2 > a2 + c2 || c2 > a2 + b2) {
+        printf("Obtuse-angled triangle is formed.\n");
+    } else {
+        printf("Acute-angled triangle is formed.\n");
+    }
+}
+
+int main() {
+    read_triangle();
+    return 0;
+}
