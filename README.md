@@ -2,10 +2,10 @@
  This repository contains various coding files written in C, C++,Java, and Python. These files cover a range of topics, including data structures, algorithms, and problem-solving exercises. The purpose of this repository is to serve as a collection of coding solutions and to help others learn and practice programming.
 
 ## Folder Structure:
-- **C/**: Contains C programs covering data structures, algorithms, and other CS fundamentals.
-- **Java/**: Contains Java programs focused on object-oriented programming, data structures, and algorithms.
-- **Python/**: Contains Python scripts and problem-solving exercises.
---**C++/**: Contains C++ programs focusing on object-oriented programming, advanced data structures, and algorithms.
+- **C**: Contains C programs covering data structures, algorithms, and other CS fundamentals.
+- **Java**: Contains Java programs focused on object-oriented programming, data structures, and algorithms.
+- **Python**: Contains Python scripts and problem-solving exercises.
+--**C++**: Contains C++ programs focusing on object-oriented programming, advanced data structures, and algorithms.
 
 
 ## Happy Usage:
