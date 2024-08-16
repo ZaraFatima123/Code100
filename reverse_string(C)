@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100], rev[100];
+    int length;
+
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    length = strlen(str); // Store the length of the string in the 'length' variable
+
+    // Reverse the string using array indexing
+    for(int i = 0; i < length; i++) {
+        rev[i] = str[length - i - 1]; // Access characters using str[i]
+    }
+    rev[length] = '\0'; // Null-terminate the reversed string
+
+    printf("The length of the string is: %d\n", length);
+    printf("The reversed string is: %s\n", rev);
+
+    return 0;
+}
