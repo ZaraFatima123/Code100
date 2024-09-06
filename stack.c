@@ -10,7 +10,7 @@ struct Stack {
 };
 
 
-void initStack(struct Stack* s) {
+void Stack(struct Stack* s) {
     s->top = -1; // Stack is empty
 }
 
@@ -56,7 +56,7 @@ void display(struct Stack* s) {
 
 int main() {
     struct Stack stack;
-    initStack(&stack); // Initialize the stack
+    void Stack(stack); // Initialize the stack
 
     int choice, value;
 
